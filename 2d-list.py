@@ -3,10 +3,11 @@
 from mcpi.minecraft import Minecraft
 from mcpi import block
 from time import sleep
+import random
 
-def init():
-    mc = Minecraft.create("192.168.7.226", 4711)
-    mc.setting("world_immutable",True)
+def init(ip):
+    mc = Minecraft.create("192.168.7.%s" % ip, 4711)
+    #mc.setting("world_immutable",True)
     #x, y, z = mc.player.getPos()        
     return mc
 
@@ -104,8 +105,30 @@ def matrixY(mc,x,y,z):
     mc.setBlocks(x-1,y+20, z-1, x+11,y+20,z+11,89)
 
 
+def typestuff(mc):
+	for i in range (0,20):
+		switcher = {
+			1:  "Crimson",
+			2:  "Logan!!",
+			3:  "lblblb!",
+			4:  "Bluebur",
+			5:  "BenJet1",
+			6:  "NoahMcG",
+			7:  "hehexd!",
+			8:  "TiToniC",
+			9:  "kriptic",
+			10: "icebowl",
+			11: "whithat",
+			12: "redhat!",
+			13: "DamBruh"
+		}
+		#print ("joined the game")
+		mc.postToChat("%s joined the game" % str(switcher.get(random.randint(1, 13))))
+		sleep(0.2)
+
 def main():
-    mc = init()
+    ipaddy = input("Please input the DESIRED ipadress ENDING (192.169.7.NUMBERHERE): ")
+    mc = init(ipaddy)
     x,y,z = mc.player.getPos()
     matrixZ(mc,x,y,z)
     mc.player.setPos(x,y,z-2)
