@@ -23,13 +23,14 @@ def matrixZ(mc,x,y,z):
          [0,0,1,1,1,1,1,1,0,0],
          [0,0,0,1,1,1,1,0,0,0],
          [0,0,0,0,0,0,0,0,0,0]]
+        
          
     for k in range (0,10):
         for l  in range (0,10):
-            print(m[k][l],end="")
+            #print(m[k][l],end="")
             theBlock = m[k][l]
             if (theBlock == 1):
-                theBlock = 49;
+                theBlock = 246;
             if (theBlock == 4):
                 theBlock = 14;
             mc.setBlock(x,29+y-k,z+l,theBlock)
@@ -48,10 +49,10 @@ def matrixZ(mc,x,y,z):
 
     for k in range (0,10):
         for l  in range (0,10):
-            print(m[k][l],end="")
+            #print(m[k][l],end="")
             theBlock = m[k][l]
             if (theBlock == 1):
-                theBlock = 49;
+                theBlock = 246;
             if (theBlock == 4):
                 theBlock = 14;
             mc.setBlock(x,19+y-k,z+l,theBlock)
@@ -69,72 +70,133 @@ def matrixZ(mc,x,y,z):
             
     for k in range (0,10):
         for l  in range (0,10):
-            print(m[k][l],end="")
+            #print(m[k][l],end="")
             theBlock = m[k][l]
             if (theBlock == 1):
-                theBlock = 49;
+                theBlock = 246;
             if (theBlock == 4):
                 theBlock = 14;
             mc.setBlock(x,9+y-k,z+l,theBlock)
     
-    print()
+    #print()
     
-def typestuff(mc):
-    mc.postToChat("Console: Any one like minecraft?")
+#def typestuff(mc):
+#    mc.postToChat("Console: Any one like minecraft?")
 
 def matrixY(mc,x,y,z):
+            
     m = [[0,0,0,0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0,0,0,0],
-     [0,0,0,0,0,0,0,0,0,0],
-     [0,0,0,0,0,0,0,0,0,0],
-     [0,0,0,0,0,0,0,0,0,0],
-     [0,0,0,0,0,0,0,0,0,0],
-     [0,0,0,0,0,0,0,0,0,0],
-     [0,0,0,0,0,0,0,0,0,0],
-     [0,0,0,0,0,0,0,0,0,0],
-     [0,0,0,0,0,0,0,0,0,0]]
-    print(m)
-    for h in range (0,10):
+         [0,0,0,1,1,1,1,0,0,0],
+         [0,0,1,1,1,1,1,1,0,0],
+         [0,1,1,1,0,0,1,1,1,0],
+         [0,1,1,0,0,0,0,1,1,0],
+         [0,1,1,0,0,0,0,1,1,0],
+         [0,1,1,1,0,0,1,1,1,0],
+         [0,0,1,1,1,1,1,1,0,0],
+         [0,0,0,1,1,1,1,0,0,0],
+         [0,0,0,0,0,0,0,0,0,0]]
+
+    for k in range (0,10):
         for l  in range (0,10):
-            print(m[h][l],end="")
-            mc.setBlocks(x+h,y-5, z+l, x+h,y+20,z+l,m[h][l])
+            #print(m[k][l],end="")
+            theBlock = m[k][l]
+            if (theBlock == 1):
+                theBlock = 246;
+            if (theBlock == 4):
+                theBlock = 14;
+            mc.setBlock(x,y-k,9+z+l,theBlock)
+            
+    m = [[0,0,0,0,0,0,0,0,0,0],
+         [0,0,0,1,1,1,1,0,0,0],
+         [0,0,1,1,1,1,1,1,0,0],
+         [0,1,1,1,0,0,1,1,1,0],
+         [0,1,1,0,0,0,0,1,1,0],
+         [0,1,1,0,0,0,0,1,1,0],
+         [0,1,1,1,0,0,1,1,1,0],
+         [0,0,1,1,1,1,1,1,0,0],
+         [0,0,0,1,1,1,1,0,0,0],
+         [0,0,0,0,0,0,0,0,0,0]]
+         
 
-    print()
-    mc.setBlocks(x-1,y-5, z-1, x+11,y-5,z+11,89)
-    mc.setBlocks(x-1,y+10, z-1, x+11,y+10,z+11,89)
-    mc.setBlocks(x-1,y+20, z-1, x+11,y+20,z+11,89)
+    for k in range (0,10):
+        for l  in range (0,10):
+            #print(m[k][l],end="")
+            theBlock = m[k][l]
+            if (theBlock == 1):
+                theBlock = 246;
+            if (theBlock == 4):
+                theBlock = 14;
+            mc.setBlock(x,y-k,19+z+l,theBlock)
+            
+    m = [[0,0,0,0,0,0,0,0,0,0],
+         [0,0,1,1,1,1,1,1,1,0],
+         [0,0,1,1,1,1,1,1,1,0],
+         [0,0,1,1,0,0,0,0,0,0],
+         [0,0,1,1,1,1,1,1,1,0],
+         [0,0,1,1,1,1,1,1,1,0],
+         [0,0,1,1,0,0,0,0,0,0],
+         [0,0,1,1,0,0,0,0,0,0],
+         [0,0,1,1,0,0,0,0,0,0],
+         [0,0,0,0,0,0,0,0,0,0]]
+            
+    for k in range (0,10):
+        for l  in range (0,10):
+            #print(m[k][l],end="")
+            theBlock = m[k][l]
+            if (theBlock == 1):
+                theBlock = 246;
+            if (theBlock == 4):
+                theBlock = 14;
+            mc.setBlock(x,y-k,29+z+l,theBlock)
 
-
-def typestuff(mc):
-	for i in range (0,20):
-		switcher = {
-			1:  "Crimson",
-			2:  "Logan!!",
-			3:  "lblblb!",
-			4:  "Bluebur",
-			5:  "BenJet1",
-			6:  "NoahMcG",
-			7:  "hehexd!",
-			8:  "TiToniC",
-			9:  "kriptic",
-			10: "icebowl",
-			11: "whithat",
-			12: "redhat!",
-			13: "DamBruh"
-		}
-		#print ("joined the game")
-		mc.postToChat("%s joined the game" % str(switcher.get(random.randint(1, 13))))
-		sleep(0.2)
+def matrixxpreeat(mc, x, y, z, i):
+    matrixZ(mc,x + i,y,z)
+    sleep(0.05)
+    mc.player.setPos(x,y,z)
+    
+def matrixypreeat(mc, x, y, z, i):
+    matrixY(mc,x + i,y,z)
+    sleep(0.05)
+    mc.player.setPos(x,y,z)
 
 def main():
     ipaddy = input("Please input the DESIRED ipadress ENDING (192.169.7.NUMBERHERE): ")
     mc = init(ipaddy)
     x,y,z = mc.player.getPos()
-    matrixZ(mc,x,y,z)
-    mc.player.setPos(x,y,z-2)
+    for i in range (0, 40):
+        if (i == 0 or i == 10 or i == 20 or i == 30 or i == 40):
+            matrixxpreeat(mc, x, y, z, i)
+    for i in range (0, 40):
+        if (i == 0 or i == 10 or i == 20 or i == 30 or i == 40):
+           matrixxpreeat(mc, x, y, z, i)
+    for i in range (0, 40):
+        if (i == 0 or i == 10 or i == 20 or i == 30 or i == 40):
+            matrixxpreeat(mc, x, y, z, i)
+            
+            
+    for i in range (0, 40):
+        if (i == 0 or i == 10 or i == 20 or i == 30 or i == 40):
+            matrixypreeat(mc, x, y, z, i)
+    for i in range (0, 40):
+        if (i == 0 or i == 10 or i == 20 or i == 30 or i == 40):
+            matrixypreeat(mc, x, y, z, i)
+    for i in range (0, 40):
+        if (i == 0 or i == 10 or i == 20 or i == 30 or i == 40):
+            matrixypreeat(mc, x, y, z, i)
     #x = x -20
-    typestuff(mc)
+    #typestuff(mc)
     #matrixY(mc,x,y,z)
+    
+    truefalse = False
+
+    #mc.postToChat('Console: connected to ip - 192.168.7.%s' % str(ipaddy))
+    while (truefalse != True):
+        text = input("Say what you would like to say: ")
+        if (text == ''):
+            #mc.postToChat('Console: disconnected from ip - 192.168.7.%s' % str(ipaddy))
+            truefalse = True
+        else:
+            mc.postToChat(text)
 
 if __name__ == "__main__":
     main()
